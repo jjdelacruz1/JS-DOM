@@ -20,7 +20,7 @@ button.addEventListener('click', function(){
 var itemDone = document.querySelector("li");
 
 itemDone.addEventListener('click', function(){
-    console.log("clicked")
+    
 })
 
 
