@@ -6,21 +6,30 @@
     SUPER BONUS) Make each task editable
 */
 
+// Adding the tasks that are entered by clicking the button
+
 var button = document.getElementById("add-button");
 
 button.addEventListener('click', function(){
     var newTodo = document.createElement("li");
     var inputValue = document.getElementById("description").value;
     newTodo.appendChild(document.createTextNode(inputValue));
+    newTodo.classList.add("new");
     document.getElementById("todo-list").appendChild(newTodo);
     var form = document.getElementById("description");
     form.value = '';
 })
 
-var itemDone = document.querySelector("li");
+// Selecting each item and toggling the linethrough css
+
+var itemDone = document.querySelectorAll("li");
 
 itemDone.addEventListener('click', function(){
-    
+    itemDone.classList.toggle("done");
 })
+
+
+
+
 
 
