@@ -20,13 +20,13 @@ button.addEventListener('click', function(){
     form.value = '';
 })
 
-// Selecting each item and toggling the linethrough css
-
-var itemDone = document.querySelectorAll("li");
-
-itemDone.addEventListener('click', function(){
-    itemDone.classList.toggle("done");
+var itemDone = document.querySelector('ul');
+itemDone.addEventListener('click', function(ev){
+    if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle("done");
+    }
 })
+
 
 
 
