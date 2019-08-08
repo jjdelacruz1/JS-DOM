@@ -13,6 +13,7 @@ var button = document.getElementById("add-button");
 button.addEventListener('click', function(){
     var newTodo = document.createElement("li");
     var inputValue = document.getElementById("description").value;
+    var deleteButton = document.getElementById("delete");
     newTodo.appendChild(document.createTextNode(inputValue));
     newTodo.classList.add("new");
     document.getElementById("todo-list").appendChild(newTodo);
@@ -20,11 +21,10 @@ button.addEventListener('click', function(){
     form.value = '';
 })
 
-var itemDone = document.querySelector('ul');
+var itemDone = document.querySelector('ul')
 itemDone.addEventListener('click', function(ev){
-    if (ev.target.tagName === 'LI') {
-        ev.target.classList.toggle("done");
-    }
+        ev.target.classList.toggle("done")
+        ev.stopPropagation()
 })
 
 

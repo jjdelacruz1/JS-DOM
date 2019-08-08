@@ -1,15 +1,28 @@
 #wrapper {
-    max-width: 480px;
-    margin: auto;
+  max-width: 480px;
+  margin: auto;
 }
 #description, #search, #todo-list {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
+body {
+	background: #bdc3c7;
+	font-family: Helvetica, sans-serif
+}
 .done {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 ::placeholder {
-    color: lightgray;
+  color: lightgray;
+}
+
+li {
+  list-style: none;
+  width: 30vw;
+}
+
+#delete {
+	float: right;
 }
